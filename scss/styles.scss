@@ -1,0 +1,89 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+ @import './variables.scss';
+
+ $hhblue: #99dbec;
+
+
+
+ .bg-dark {
+     background-color: black !important;
+ }
+
+ .btn-primary {
+  background-color: $hhblue;
+  border-color: darken($hhblue, 10%);
+  color: black;
+  font-weight: 600;
+ }
+ .btn-secondary {
+   background-color: black;
+   border: 4px solid $hhblue;
+   color: $hhblue;
+   font-weight: 600;
+   &:hover {
+     background-color: $hhblue;
+     color: black;
+     border: 4px solid $hhblue;
+   }
+   &.centred {
+     text-align: center;
+   }
+ }
+
+ body {
+    padding-top: 54px;
+  }
+  
+  @media (min-width: 992px) {
+    body {
+      padding-top: 56px;
+    }
+  }
+  
+  .carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 39px;
+  }
+
+
+  .navbar-logo {
+    max-width: 85px;
+  }
+
+  .partner-logo {
+    max-height: 100px;
+    margin: 0 20px 20px 0;
+  }
+
+  .intro-cta {
+    display: block;
+    margin: 20px 0 20px -15px;
+  }
+
+  .white-section {
+    background-color: white;
+  }
+
+  .black-section {
+    background-color: black;
+  }
+
+  .intro-section {
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+  }
