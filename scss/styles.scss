@@ -5,6 +5,7 @@
  */
 
  @import './variables.scss';
+ @import '../node_modules/font-awesome/scss/font-awesome.scss';
 
  $hhblue: #99dbec;
 
@@ -37,6 +38,10 @@
 
  body {
     padding-top: 54px;
+  }
+
+  hr {
+    margin: 0;
   }
   
   @media (min-width: 992px) {
@@ -86,6 +91,18 @@
     color: white;
     text-align: center;
     padding: 50px 0;
+    &:after {
+      content: '';
+      width: 800px;
+      height: 400px;
+      position: absolute;
+      background-image: url('/images/grey-svg-hh-logo.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: -350px;
+      top: 750px;
+      opacity: 0.5;
+    }
   }
 
   .team-section {
@@ -161,5 +178,96 @@
           }
         }
       }
+    }
+  }
+
+  .footer-section {
+    text-align: center;
+    color: white;
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      &:after {
+        content: '';
+        width: 800px;
+        height: 400px;
+        position: absolute;
+        background-image: url('/images/grey-svg-hh-logo.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: -900px;
+        opacity: 0.5;
+      }
+      .contact-method {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        width: 100%;  
+        justify-content: center;
+        .contact-method--icon {
+          padding: 20px;
+          font-size: 60px;
+          i {
+            color: $hhblue;
+          }
+        }
+        .contact-method--details {
+          font-size: 30px;
+          text-align: left;
+          min-width: 275px;
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+    .map-container {
+      margin: 50px;
+    }
+  }
+
+  .call-to-action-footer {
+    padding-top: 50px;
+    color: white;
+    position: relative;
+    .call-to-action {
+      margin-top: 100px;
+      text-align: center;
+      // position: absolute;
+    }
+    .footer-image-wrapper {
+      width: 100%;
+
+
+      .footer-image {
+        width: 100%;
+        margin-left: -15px;
+
+      }
+    }
+    .footer-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      margin-left: -50%;
+      .footer-links {
+  
+        a {
+          color: white;
+         
+        }
+      }
+    }
+
+    .footer-copyright-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column; 
+      justify-content: flex-end;
+      align-items: center;
     }
   }
