@@ -52,6 +52,13 @@
   hr {
     margin: 0;
   }
+
+  .breadcrumb {
+    margin-top: 0;
+    @include media-breakpoint-up(md) { 
+      margin-top: 25px
+    }
+  }
   
   @media (min-width: 992px) {
     body {
@@ -232,7 +239,7 @@
   .footer-section {
     text-align: center;
     color: white;
-    padding-bottom: 50px;
+    padding: 50px 0;
     @include media-breakpoint-up(md) { 
       padding-bottom: 0;
     }
@@ -340,5 +347,126 @@
       flex-direction: column; 
       justify-content: flex-end;
       align-items: center;
+    }
+  }
+
+.testimonials-section {
+  margin: 0px -15px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  .testimonial-wrapper {
+    padding-bottom: 50px;
+    overflow: hidden;
+    @include media-breakpoint-up(md) { 
+    padding: 0px;
+    
+    }
+    .testimonial--image {
+      width: 100%;
+      transform: scale(1);
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s;
+      }
+    }
+    .testimonial-content-wrapper {
+      color: white;
+      text-align: center;
+      padding: 0 15px; 
+      @include media-breakpoint-up(md) { 
+        padding: 0;
+      }
+      .testimonial--quote {
+        font-size: 30px;
+        padding: 15px;
+        display: block;
+        font-style: italic;
+      }
+      .testimonial--author {
+        font-size: 25px;
+        display: block;
+      }
+    }
+  }
+}
+
+.case-study-section {
+  margin: 0 -15px;
+  color: white;
+  overflow: hidden;
+  .case-study-full-width {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    .case-study-full-width--image {
+
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+      .case-study-full-width-content-wrapper {
+        position: absolute;
+        top: -120px;
+        width: 100%;
+        opacity: 1;
+        justify-content: center;
+        background-color: $hhblue;
+        height: 100px;
+        visibility: hidden;
+        align-content: center;
+        transition: all 0.5s linear;
+        
+        .case-study-full-width--content {
+          font-size: 25px;
+          color: black;
+          text-align: center;
+          padding-top: 25px;
+          
+          }
+          &.open {
+            opacity: 1;
+            top: 0px;
+            transition: all 0.25s linear;
+            visibility: visible;
+          }
+      }
+    }
+  .case-study-half-width {
+    position: relative;
+    overflow: hidden;
+   
+    .case-study-half-width--image {
+      width: 100%;
+    }
+      .case-study-half-width-content-wrapper {
+        position: absolute;
+        top: -120px;
+        width: 100%;
+        opacity: 1;
+        justify-content: center;
+        background-color: $hhblue;
+        height: 100px;
+        align-content: center;
+        transition: all 0.25s linear;
+        .case-study-half-width--content {
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        padding-top: 5%;
+        }
+        &.open {
+          opacity: 1;
+          top: 0px;
+          transition: all 0.25s linear;
+        }
+      }
+    }
+  }
+
+  .full-width-profiles {
+    .profile-content {
+      padding: 50px 0px 50px 0px;
+      text-align: center;
     }
   }

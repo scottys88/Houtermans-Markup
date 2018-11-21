@@ -8644,6 +8644,12 @@ body {
 hr {
   margin: 0; }
 
+.breadcrumb {
+  margin-top: 0; }
+  @media (min-width: 768px) {
+    .breadcrumb {
+      margin-top: 25px; } }
+
 @media (min-width: 992px) {
   body {
     padding-top: 56px; } }
@@ -8771,7 +8777,7 @@ hr {
 .footer-section {
   text-align: center;
   color: white;
-  padding-bottom: 50px; }
+  padding: 50px 0; }
   @media (min-width: 768px) {
     .footer-section {
       padding-bottom: 0; } }
@@ -8856,3 +8862,98 @@ hr {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center; }
+
+.testimonials-section {
+  margin: 0px -15px;
+  padding-bottom: 100px;
+  overflow: hidden; }
+  .testimonials-section .testimonial-wrapper {
+    padding-bottom: 50px;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      .testimonials-section .testimonial-wrapper {
+        padding: 0px; } }
+    .testimonials-section .testimonial-wrapper .testimonial--image {
+      width: 100%;
+      transform: scale(1);
+      transition: transform 0.5s; }
+      .testimonials-section .testimonial-wrapper .testimonial--image:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s; }
+    .testimonials-section .testimonial-wrapper .testimonial-content-wrapper {
+      color: white;
+      text-align: center;
+      padding: 0 15px; }
+      @media (min-width: 768px) {
+        .testimonials-section .testimonial-wrapper .testimonial-content-wrapper {
+          padding: 0; } }
+      .testimonials-section .testimonial-wrapper .testimonial-content-wrapper .testimonial--quote {
+        font-size: 30px;
+        padding: 15px;
+        display: block;
+        font-style: italic; }
+      .testimonials-section .testimonial-wrapper .testimonial-content-wrapper .testimonial--author {
+        font-size: 25px;
+        display: block; }
+
+.case-study-section {
+  margin: 0 -15px;
+  color: white;
+  overflow: hidden; }
+  .case-study-section .case-study-full-width {
+    position: relative;
+    overflow: hidden;
+    width: 100%; }
+    .case-study-section .case-study-full-width .case-study-full-width--image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover; }
+    .case-study-section .case-study-full-width .case-study-full-width-content-wrapper {
+      position: absolute;
+      top: -120px;
+      width: 100%;
+      opacity: 1;
+      justify-content: center;
+      background-color: #99dbec;
+      height: 100px;
+      visibility: hidden;
+      align-content: center;
+      transition: all 0.5s linear; }
+      .case-study-section .case-study-full-width .case-study-full-width-content-wrapper .case-study-full-width--content {
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        padding-top: 25px; }
+      .case-study-section .case-study-full-width .case-study-full-width-content-wrapper.open {
+        opacity: 1;
+        top: 0px;
+        transition: all 0.25s linear;
+        visibility: visible; }
+  .case-study-section .case-study-half-width {
+    position: relative;
+    overflow: hidden; }
+    .case-study-section .case-study-half-width .case-study-half-width--image {
+      width: 100%; }
+    .case-study-section .case-study-half-width .case-study-half-width-content-wrapper {
+      position: absolute;
+      top: -120px;
+      width: 100%;
+      opacity: 1;
+      justify-content: center;
+      background-color: #99dbec;
+      height: 100px;
+      align-content: center;
+      transition: all 0.25s linear; }
+      .case-study-section .case-study-half-width .case-study-half-width-content-wrapper .case-study-half-width--content {
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        padding-top: 5%; }
+      .case-study-section .case-study-half-width .case-study-half-width-content-wrapper.open {
+        opacity: 1;
+        top: 0px;
+        transition: all 0.25s linear; }
+
+.full-width-profiles .profile-content {
+  padding: 50px 0px 50px 0px;
+  text-align: center; }
